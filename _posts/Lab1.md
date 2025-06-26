@@ -7,6 +7,7 @@ tags: [OS,Syscall]
 description: 初识系统调用
 ---
 
+# Lab1: 初识系统调用
 
 `Lab1`的核心主要是熟悉使用`system call`，使用系统调用完成用户的程序，包括`sleep`，`fork`等操作。
 ## 核心流程
