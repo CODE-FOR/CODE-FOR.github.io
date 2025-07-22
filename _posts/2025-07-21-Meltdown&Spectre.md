@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Meltdown & Spectre
-date: 2025-06-26
+date: 2025-07-21
 categories: blog
 tags: [OS]
 description: 初步全面认知操作系统
