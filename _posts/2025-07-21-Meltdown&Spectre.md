@@ -1,3 +1,13 @@
+---
+layout: post
+title: Meltdown & Spectre
+date: 2025-06-26
+categories: blog
+tags: [OS]
+description: 初步全面认知操作系统
+---
+
+
 感谢[知乎用户G0K17q](https://zhuanlan.zhihu.com/p/32784852)
 
 Spectre和Meltdown是缓冲时延旁路攻击的两种实际攻击方法。
