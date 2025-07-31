@@ -91,37 +91,6 @@
             </div>
         </div>
     </div>
-    {% if page.mermaid %}
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.0.0/mermaid.min.js"></script>
-      <script>
-          var config = {
-              startOnLoad:true,
-              flowchart:{
-                  useMaxWidth:false,
-                  htmlLabels:true
-              }
-          };
-          mermaid.initialize(config);
-          $(function(){
-              var elements = document.getElementsByClassName("language-mermaid");
-              for (var i = elements.length; i--;) {
-                  element = elements[i];
-                  var graphDefinition = element.innerText;
-                  if (graphDefinition) {
-                      var svg = mermaid.render('ha_mermaid_' + i, graphDefinition, function(svg){});
-                      if (svg) {
-                          var svgElement = document.createElement('div');
-                          preNode = element.parentNode;
-                          svgElement.innerHTML = svg;
-                          svgElement.setAttribute('class', 'mermaid');
-                          svgElement.setAttribute('data-processed', 'true');
-                          preNode.parentNode.replaceChild(svgElement, preNode);
-                      }
-                  }
-              }
-          });
-      </script>
-{% endif %}
 </footer>
 
 <!-- jQuery -->
@@ -142,3 +111,11 @@
     })
 </script>
 <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10.0.2/+esm';
+mermaid.initialize({ startOnLoad: false });
+await mermaid.run({
+  querySelector: '.language-mermaid',
+});
+</script>
