@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://code-for.github.io/blog/sitemap.xml
